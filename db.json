@@ -1,0 +1,12 @@
+{
+  "Users": [
+    {
+      "id": "admin",
+      "name": "admin",
+      "email": "admin@gmail.com",
+      "password": "admin123",
+      "role": "mujtaba",
+      "isActive": true
+    }
+  ]
+}

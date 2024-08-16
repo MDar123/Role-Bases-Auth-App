@@ -1,0 +1,18 @@
+<div class="login-page">
+<div class="form">
+<form class="login-form" [formGroup]="loginForm">
+<input type="text" placeholder="username" formControlName="id" name="id" />
+<div *ngIf="loginForm.get('id')?.invalid && (loginForm.get('id')?.touched || loginForm.get('id')?.dirty)">
+<span *ngIf="loginForm.get('id')?.errors?.['required']">This Field is required</span>
+<span *ngIf="loginForm.get('id')?.errors?.['minlength']">First Name must be minimum 5 characters long.</span>
+</div>
+<input type="password" placeholder="password" formControlName="password" name="password" />
+<div *ngIf="loginForm.get('password')?.invalid && (loginForm.get('password')?.touched || loginForm.get('password')?.dirty)">
+<span *ngIf="loginForm.get('password')?.errors?.['required']">This Field is required</span>
+<span *ngIf="loginForm.get('password')?.errors?.['minlength']">Password must be minimum 5 characters long.</span>
+</div>
+<button (click)="confirmLogin()">login</button>
+<p class="message">Not registered? <a routerLink="/register" routerLinkActive="router-link-active">Create an account</a></p>
+</form>
+</div>
+</div>

@@ -1,0 +1,49 @@
+<div class="login-page">
+  <div class="form">
+    <form class="signup-form" [formGroup]="signUpForm">
+      <input type="text" placeholder="Username" name="id" formControlName="id">
+      <span class="error-message"
+        *ngIf="signUpForm.get('id')?.invalid && (signUpForm.get('id')?.touched || signUpForm.get('id')?.dirty)">
+        <span *ngIf="signUpForm.get('id')?.errors?.['required']">This Field is required</span>
+        <span *ngIf="signUpForm.get('id')?.errors?.['minlength']">Username  must be minimum 5 characters long.</span>
+      </span>
+
+      <input type="text" placeholder="Full Name" name="name" formControlName="name">
+      <span class="error-message"
+        *ngIf="signUpForm.get('name')?.invalid && (signUpForm.get('name')?.touched || signUpForm.get('name')?.dirty)">
+        <span *ngIf="signUpForm.get('name')?.errors?.['required']">This Field is required</span>
+        <span *ngIf="signUpForm.get('userName')?.errors?.['minlength']">Username must be minimum 5 characters
+          long.</span>
+      </span>
+
+      <input type="email" placeholder="Email" name="email" formControlName="email">
+      <span class="error-message"
+        *ngIf="signUpForm.get('email')?.invalid && (signUpForm.get('email')?.touched || signUpForm.get('email')?.dirty)">
+        <span *ngIf="signUpForm.get('email')?.errors?.['required']">This Field is required</span>
+        <span *ngIf="signUpForm.get('email')?.errors?.['email']">Please enter a valid email address.</span>
+      </span>
+
+      <input type="password" placeholder="Password" name="password" formControlName="password">
+      <span class="error-message"
+        *ngIf="signUpForm.get('password')?.invalid && (signUpForm.get('password')?.touched || signUpForm.get('password')?.dirty)">
+        <span *ngIf="signUpForm.get('password')?.errors?.['required']">This Field is required</span>
+        <span *ngIf="signUpForm.get('password')?.errors?.['minlength']">Password must be minimum 8 characters
+          long.</span>
+        <span *ngIf="signUpForm.get('password')?.errors?.['maxlength']">Password must be maximum 15 characters
+          long.</span>
+      </span>
+
+      <input type="password" placeholder="Confirm Password" name="confirmPassword" formControlName="confirmpassword">
+      <span class="error-message"
+        *ngIf="signUpForm.get('confirmpassword')?.invalid && (signUpForm.get('confirmpassword')?.touched || signUpForm.get('confirmpassword')?.dirty)">
+        <span *ngIf="signUpForm.get('confirmpassword')?.errors?.['required']">This Field is required</span>
+        <!-- <span >Confirm Password does not match Password.</span> -->
+      </span>
+      
+
+       <button type="submit" (click)="confirmSignUp()">Signup</button>
+      <p class="message">Already have an account? <a routerLink="/login" routerLinkActive="router-link-active">Login</a>
+      </p>
+    </form>
+  </div>
+</div>
