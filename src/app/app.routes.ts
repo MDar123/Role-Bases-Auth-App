@@ -15,7 +15,7 @@ export const routes: Routes = [
     component:UserListComponent,
     canActivate:[authGuard],
     data:{
-        role:'mujtaba'
+        role:'admin'
     }
 }
 

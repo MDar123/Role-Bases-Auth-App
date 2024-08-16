@@ -5,7 +5,7 @@
       "name": "admin",
       "email": "admin@gmail.com",
       "password": "admin123",
-      "role": "mujtaba",
+      "role": "admin",
       "isActive": true
     }
   ]
