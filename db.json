@@ -7,6 +7,14 @@
       "password": "admin123",
       "role": "admin",
       "isActive": true
+    },
+    {
+      "id": "mujtaba",
+      "name": "Mujtaba Sohail Dar",
+      "email": "mujtaba@gmail.com",
+      "password": "mujtaba123",
+      "role": "",
+      "isActive": false
     }
   ]
 }
